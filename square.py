@@ -5,6 +5,7 @@ s = 0
 #đếm xem có bao nhiêu hàng xóm (=1) xung quanh
 def hang_xom(r,c):
     count = 0
+    # loại ô 0
     if martrix[r][c] == 0:
         return 4
     #trên
@@ -20,6 +21,7 @@ def hang_xom(r,c):
     if (c > 0 and martrix[r][c-1] == 1):
         count+=1
     return count
+
 
 for i in range(n):
     for j in range(m):
