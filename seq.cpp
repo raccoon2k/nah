@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int n = 0, k = 0;
-    int p = -1, q = -1;
+    int p = -1, q = -1, vp = -1;
     cin >> n >> k;
     int a[n];
     unordered_set<int> u;
@@ -35,11 +35,12 @@ int main()
         for (int i = n - 1; i >= 0; i--)
             if (a[i] == p)
             {
+                vp = i;
                 cout << i + 1 << " ";
                 break;
             }
         for (int i = n - 1; i >= 0; i--)
-            if (a[i] == q)
+            if (a[i] == q && i != vp)
             {
                 cout << i + 1;
                 break;
